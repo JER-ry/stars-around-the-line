@@ -133,9 +133,13 @@
 <Stage
   config={{ width: 500, height: 500 }}
   on:mousedown={handleMouseDown}
+  on:touchstart={handleMouseDown}
   on:mousemove={handleMouseMove}
+  on:touchmove={handleMouseMove}
   on:mouseup={handleMouseUp}
-  on:mouseleave={handleMouseLeave}>
+  on:touchend={handleMouseUp}
+  on:mouseleave={handleMouseLeave}
+  >
   <Layer>
     <Rect config={{ x: 0, y: 0, width: 500, height: 500, fill: "#eeeeee" }} />
     {#if isPaint}
